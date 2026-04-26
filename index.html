@@ -1,884 +1,646 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>批量收购合作：商家直接联系，快速报价与长期合作</title>
-    
-    <!-- WhatsApp 链接预览配置 -->
-    <meta property="og:title" content="你的账号有问题，兄弟" />
-    <meta property="og:description" content="你不搞快点处理一下号没了哟" />
-    <meta property="og:image" content="https://luodiye-delta.vercel.app/IMG_20260426_162309_762.jpg" />
-    
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://luodiye-delta.vercel.app" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>批量收购合作：商家直接联系，快速报价与长期合作</title>
+  <meta
+    name="description"
+    content="长期收购各类服装、二手皮包、电子产品，支持批量回收、快速报价与长期合作。发送链接时可展示广告图，提高点击率与转化。"
+  >
+  <link rel="canonical" href="https://luodiye-delta.vercel.app/">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="商家回收合作中心">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luodiye-delta.vercel.app/">
+  <meta property="og:title" content="批量收购合作：商家直接联系，快速报价与长期合作">
+  <meta
+    property="og:description"
+    content="长期收购各类服装、二手皮包、电子产品，支持批量回收、快速报价与长期合作。发送给客户时会在链接下方展示广告图。"
+  >
+  <meta property="og:image" content="https://luodiye-delta.vercel.app/share-preview.png">
+  <meta property="og:image:secure_url" content="https://luodiye-delta.vercel.app/share-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="批量收购合作广告图">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f9fafb;
-            color: #111827;
-            line-height: 1.5;
-            padding: 2rem 1rem;
-        }
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="批量收购合作：商家直接联系，快速报价与长期合作">
+  <meta
+    name="twitter:description"
+    content="长期收购各类服装、二手皮包、电子产品，支持批量回收、快速报价与长期合作。"
+  >
+  <meta name="twitter:image" content="https://luodiye-delta.vercel.app/share-preview.png">
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+  <style>
+    :root {
+      --bg: #f4fbf7;
+      --surface: #ffffff;
+      --surface-soft: #eefaf1;
+      --line: #dbe8df;
+      --text: #14261d;
+      --muted: #4d6558;
+      --brand: #12824c;
+      --brand-dark: #0b5f36;
+      --brand-soft: #e8f8ee;
+      --shadow: 0 18px 40px rgba(16, 91, 51, 0.08);
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --max-width: 1160px;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 3rem 1rem;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e6f4ea 100%);
-            border-radius: 2rem;
-            margin-bottom: 3rem;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #065f46, #0d9488);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .hero p {
-            font-size: 1.125rem;
-            color: #374151;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
+    body {
+      background: linear-gradient(180deg, #f7fcf8 0%, #eef8f2 100%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.6;
+    }
 
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .stat-card {
-            background: white;
-            padding: 1rem 1.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            font-weight: 600;
-        }
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+    }
 
-        .stat-number {
-            font-size: 1.5rem;
-            color: #0d9488;
-            display: block;
-        }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 252, 248, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(219, 232, 223, 0.9);
+    }
 
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
+    .brand {
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
 
-        .category-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 6px -2px rgba(0,0,0,0.05);
-            text-align: center;
-            transition: all 0.2s ease;
-            border: 1px solid #e5e7eb;
-        }
+    .brand .accent {
+      color: var(--brand);
+    }
 
-        .category-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
-        }
+    .nav {
+      display: flex;
+      gap: 1.2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
 
-        .category-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      font-weight: 700;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+    }
 
-        .category-desc {
-            font-size: 0.875rem;
-            color: #4b5563;
-        }
+    .btn:hover {
+      transform: translateY(-1px);
+    }
 
-        .features {
-            background: white;
-            border-radius: 2rem;
-            padding: 2rem;
-            margin-bottom: 4rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
+    .btn-primary {
+      padding: 0.88rem 1.35rem;
+      color: #fff;
+      background: linear-gradient(135deg, #16a34a, #0f8f49);
+      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.24);
+    }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+    .btn-secondary {
+      padding: 0.88rem 1.35rem;
+      color: var(--brand-dark);
+      background: #fff;
+      border: 1px solid var(--line);
+    }
 
-        .feature-item h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+    .hero {
+      padding: 3.5rem 0 2rem;
+    }
 
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 1.4rem;
+      align-items: stretch;
+    }
 
-        .testimonial-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 1.5rem;
-            border: 1px solid #e5e7eb;
-            font-style: normal;
-        }
+    .hero-card,
+    .hero-preview {
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
 
-        .testimonial-text {
-            font-size: 0.95rem;
-            color: #1f2937;
-            margin-bottom: 1rem;
-        }
+    .hero-card {
+      padding: 2rem;
+    }
 
-        .testimonial-author {
-            font-weight: 600;
-            color: #0d9488;
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.42rem 0.85rem;
+      border-radius: 999px;
+      background: var(--brand-soft);
+      color: var(--brand-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
 
-        .faq {
-            background: white;
-            border-radius: 2rem;
-            padding: 2rem;
-            margin-bottom: 4rem;
-        }
+    h1 {
+      margin: 1rem 0 0.9rem;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1.15;
+      color: #0f3d26;
+    }
 
-        .faq-item {
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 1rem;
-        }
+    .lead {
+      margin: 0 0 1.5rem;
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 60ch;
+    }
 
-        .faq-question {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
 
-        .faq-answer {
-            color: #4b5563;
-        }
+    .metrics {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
 
-        .cta {
-            text-align: center;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 2rem;
-            margin-bottom: 2rem;
-        }
+    .metric {
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      background: linear-gradient(180deg, #ffffff 0%, #f5fbf6 100%);
+      border: 1px solid var(--line);
+    }
 
-        .whatsapp-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #25D366;
-            color: white;
-            font-weight: 700;
-            font-size: 1.125rem;
-            padding: 0.75rem 2rem;
-            border-radius: 40px;
-            text-decoration: none;
-            margin-top: 1.5rem;
-            transition: background 0.2s;
-        }
+    .metric strong {
+      display: block;
+      font-size: 1.2rem;
+      color: var(--brand-dark);
+    }
 
-        .whatsapp-btn:hover {
-            background: #128C7E;
-        }
+    .metric span {
+      display: block;
+      margin-top: 0.15rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
 
-        .footer {
-            text-align: center;
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-top: 3rem;
-        }
+    .hero-preview {
+      padding: 1.1rem;
+      display: grid;
+      gap: 0.9rem;
+      background: linear-gradient(180deg, #f7fff8 0%, #ecf7ef 100%);
+    }
 
-        @media (max-width: 640px) {
-            .hero h1 { font-size: 1.75rem; }
-            .section-title { font-size: 1.5rem; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="hero">
-            <h1>批量收购合作：商家直接联系，快速报价与长期合作</h1>
-            <p>我们长期收购各类服装、二手皮包、电子产品，欢迎有稳定货源的商家对接。<br>支持批量回收、持续采购、长期合作，报价透明、沟通高效。</p>
-            <div class="stats">
-                <div class="stat-card"><span class="stat-number">1000+</span> 累计合作商家</div>
-                <div class="stat-card"><span class="stat-number">48h</span> 批量回收响应时效</div>
-                <div class="stat-card"><span class="stat-number">24/7</span> WhatsApp 在线咨询</div>
-            </div>
-        </div>
+    .preview-card {
+      border-radius: 22px;
+      border: 1px solid #d7eadc;
+      background: linear-gradient(135deg, #f4fff5 0%, #ecfff6 50%, #e6f7ff 100%);
+      padding: 1.2rem;
+    }
 
-        <div class="section-title">核心回收品类</div>
-        <div class="categories">
-            <div class="category-card">
-                <div class="category-icon">👕</div>
-                <div class="category-title">各类服装</div>
-                <div class="category-desc">男女装 / 童装 / 库存尾货回收</div>
-            </div>
-            <div class="category-card">
-                <div class="category-icon">👜</div>
-                <div class="category-title">二手皮包</div>
-                <div class="category-desc">品牌包 / 轻奢包 / 成色分级回收</div>
-            </div>
-            <div class="category-card">
-                <div class="category-icon">📱</div>
-                <div class="category-title">电子产品</div>
-                <div class="category-desc">手机 / 平板 / 笔记本 / 配件回收</div>
-            </div>
-            <div class="category-card">
-                <div class="category-icon">🤝</div>
-                <div class="category-title">量大合作</div>
-                <div class="category-desc">量大者优先，欢迎长期供货商</div>
-            </div>
-        </div>
+    .preview-label {
+      display: inline-block;
+      margin-bottom: 0.9rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      background: rgba(255, 255, 255, 0.85);
+    }
 
-        <div class="features">
-            <div class="section-title" style="font-size:1.75rem; margin-bottom:0.5rem;">为什么选择我们做批量回收合作</div>
-            <p style="text-align:center; color:#4b5563; margin-bottom:2rem;">流程标准、沟通高效、合作稳定，适合有货源的商家长期对接。</p>
-            <div class="features-grid">
-                <div class="feature-item"><h3>⚡ 快速评估报价</h3><p>提供图片/视频/清单即可初步估价，批量货源可快速确认合作意向。</p></div>
-                <div class="feature-item"><h3>📦 批量回收能力</h3><p>支持多品类并行处理，适配商家清仓、换季、回款等高频场景。</p></div>
-                <div class="feature-item"><h3>🔁 长期稳定合作</h3><p>量大优先，欢迎长期供货合作伙伴，建立持续回收通道。</p></div>
-            </div>
-        </div>
+    .preview-image {
+      border-radius: 22px;
+      border: 1px solid rgba(15, 143, 73, 0.14);
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 16px 36px rgba(15, 143, 73, 0.08);
+    }
 
-        <div class="section-title">合作商家反馈</div>
-        <div class="testimonials">
-            <div class="testimonial-card"><div class="testimonial-text">“库存服装批量处理很快，沟通直接，省去了很多中间环节。”</div><div class="testimonial-author">— 服装渠道商</div></div>
-            <div class="testimonial-card"><div class="testimonial-text">“二手皮包可以按成色分级回收，报价清晰，适合长期合作。”</div><div class="testimonial-author">— 二奢商家</div></div>
-            <div class="testimonial-card"><div class="testimonial-text">“电子产品整批出货对接顺畅，响应快，后续合作也很稳定。”</div><div class="testimonial-author">— 数码供货商</div></div>
-        </div>
+    .preview-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-        <div class="faq">
-            <div class="section-title" style="font-size:1.5rem;">常见问题</div>
-            <div class="faq-item"><div class="faq-question">你们主要回收哪些品类？</div><div class="faq-answer">目前重点回收各类服装、二手皮包、电子产品，也欢迎其他品类先发资料咨询。</div></div>
-            <div class="faq-item"><div class="faq-question">量大可以长期合作吗？</div><div class="faq-answer">可以。量大商家可建立长期回收合作机制，按周期对接货源与回收计划。</div></div>
-            <div class="faq-item"><div class="faq-question">怎么开始对接？</div><div class="faq-answer">直接点击页面的 WhatsApp 按钮发送品类与大致数量，我们会尽快给出回收方案。</div></div>
-        </div>
+    .preview-copy {
+      padding: 0.3rem 0.1rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
 
-        <div class="cta">
-            <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">准备开始批量回收合作？</h2>
-            <p>量大者、可长期合作者，欢迎直接通过 WhatsApp 与我联系咨询。</p>
-            <a href="https://wa.me/855718240989" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
-                💬 WhatsApp：+855 71 824 0989
-            </a>
-        </div>
+    .section {
+      padding: 1.8rem 0;
+    }
 
-        <div class="footer">
-            © 批量收购合作 | 商家直接联系，快速报价与长期合作
-        </div>
-    </div>
-</body>
-</html>          var(--bg);
-        color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    .section-title {
+      margin-bottom: 0.45rem;
+      font-size: 1.8rem;
+      color: #123c27;
+    }
+
+    .section-sub {
+      margin-bottom: 1.15rem;
+      color: var(--muted);
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.95rem;
+    }
+
+    .card {
+      padding: 1.15rem;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3,
+    .card h4 {
+      margin-bottom: 0.4rem;
+      color: #123c27;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .category-icon {
+      font-size: 2rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 1rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.95rem;
+    }
+
+    .quote {
+      padding: 1.2rem;
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .quote p {
+      color: #22372b;
+    }
+
+    .quote .author {
+      margin-top: 0.7rem;
+      color: var(--brand);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .faq {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .faq details {
+      padding: 0.95rem 1rem;
+      border-radius: 16px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #123c27;
+    }
+
+    .faq p {
+      margin-top: 0.6rem;
+      color: var(--muted);
+    }
+
+    .final-cta {
+      margin: 1.4rem auto 3rem;
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #0f3d26, #166534);
+      color: #fff;
+      box-shadow: 0 20px 48px rgba(15, 61, 38, 0.18);
+    }
+
+    .final-cta p {
+      margin-top: 0.4rem;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .final-cta .cta-row {
+      margin-top: 1rem;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 30;
+      padding: 0.95rem 1.2rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #35ec7b, #18b856);
+      color: #06331c;
+      font-weight: 800;
+      box-shadow: 0 18px 36px rgba(24, 184, 86, 0.26);
+    }
+
+    footer {
+      padding: 1rem 0 1.8rem;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .two-column,
+      .grid-4,
+      .testimonial-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
-      a {
-        color: inherit;
-        text-decoration: none;
+      .hero-grid,
+      .two-column {
+        grid-template-columns: 1fr;
       }
+    }
 
-      .container {
-        width: min(100% - 2rem, var(--max-width));
-        margin: 0 auto;
-      }
-
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        border-bottom: 1px solid var(--line);
-        background: rgba(6, 11, 20, 0.75);
-        backdrop-filter: blur(10px);
-      }
-
-      .topbar-inner {
-        min-height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-      }
-
-      .brand {
-        font-size: 1.1rem;
-        font-weight: 800;
-        letter-spacing: 0.02em;
-      }
-
-      .brand .accent {
-        color: var(--brand-2);
-      }
-
+    @media (max-width: 640px) {
       .nav {
-        display: flex;
-        gap: 1.2rem;
-        color: var(--muted);
-        font-size: 0.92rem;
+        display: none;
       }
 
-      .btn {
-        border: 0;
-        cursor: pointer;
-        font-weight: 700;
-        border-radius: 999px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.45rem;
-        transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
-      }
-
-      .btn:hover {
-        transform: translateY(-1px);
-      }
-
-      .btn:active {
-        transform: translateY(0);
-      }
-
-      .btn-primary {
-        padding: 0.85rem 1.35rem;
-        color: #fff;
-        background: linear-gradient(90deg, var(--brand), #4f8dff 45%, var(--brand-2));
-        box-shadow: 0 10px 26px rgba(45, 124, 255, 0.35);
-      }
-
-      .btn-whatsapp {
-        padding: 0.95rem 1.4rem;
-        color: #071310;
-        background: linear-gradient(90deg, #34f58a, var(--success));
-        box-shadow: 0 14px 28px rgba(37, 211, 102, 0.35);
+      .metrics,
+      .grid-4,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero {
-        padding: 4.5rem 0 3rem;
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 1.6rem;
-        align-items: stretch;
+        padding-top: 2.4rem;
       }
 
       .hero-card,
-      .hero-showcase {
-        background: linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-        border: 1px solid var(--line);
-        border-radius: var(--radius-lg);
-      }
-
-      .hero-card {
-        padding: 2rem;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        padding: 0.35rem 0.8rem;
-        border-radius: 999px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        color: #cde8ff;
-        border: 1px solid rgba(45, 124, 255, 0.38);
-        background: rgba(45, 124, 255, 0.14);
-      }
-
-      h1 {
-        margin: 1rem 0 0.8rem;
-        font-size: clamp(1.7rem, 2.8vw, 2.85rem);
-        line-height: 1.18;
-      }
-
-      .lead {
-        margin: 0 0 1.4rem;
-        color: var(--muted);
-        line-height: 1.65;
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.7rem;
-      }
-
-      .metrics {
-        margin-top: 1.4rem;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.65rem;
-      }
-
-      .metric {
-        border-radius: var(--radius-md);
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.03);
-        padding: 0.9rem 0.75rem;
-      }
-
-      .metric strong {
-        font-size: 1.05rem;
-      }
-
-      .metric span {
-        display: block;
-        margin-top: 0.2rem;
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      .hero-showcase {
-        padding: 1rem;
-        display: grid;
-        gap: 0.8rem;
-      }
-
-      .tile {
-        border-radius: var(--radius-md);
-        border: 1px solid var(--line);
-        background: var(--surface);
-        padding: 1rem;
-      }
-
-      .tile h3 {
-        margin: 0 0 0.35rem;
-        font-size: 1rem;
-      }
-
-      .tile p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.86rem;
-        line-height: 1.55;
-      }
-
-      .section {
-        padding: 1.6rem 0;
-      }
-
-      .section-title {
-        margin: 0 0 0.4rem;
-        font-size: 1.45rem;
-      }
-
-      .section-sub {
-        margin: 0 0 1rem;
-        color: var(--muted);
-      }
-
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0.9rem;
-      }
-
-      .product-card {
-        border: 1px solid var(--line);
-        border-radius: var(--radius-md);
-        background: var(--surface);
-        overflow: hidden;
-      }
-
-      .product-thumb {
-        aspect-ratio: 1 / 1;
-        background: linear-gradient(145deg, #15243f, #0c172b);
-        display: grid;
-        place-items: center;
-        font-weight: 700;
-        color: #b7d8ff;
-      }
-
-      .product-body {
-        padding: 0.8rem;
-      }
-
-      .product-name {
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      .product-meta {
-        margin: 0.32rem 0 0;
-        color: var(--muted);
-        font-size: 0.82rem;
-      }
-
-      .price {
-        margin-top: 0.6rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .price strong {
-        color: #9cc6ff;
-      }
-
-      .features {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.8rem;
-      }
-
-      .feature {
-        border: 1px solid var(--line);
-        border-radius: var(--radius-md);
-        background: var(--surface);
-        padding: 1rem;
-      }
-
-      .feature h4 {
-        margin: 0 0 0.45rem;
-      }
-
-      .feature p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.6;
-        font-size: 0.9rem;
-      }
-
-      .proof {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.8rem;
-      }
-
-      .quote {
-        border-radius: var(--radius-md);
-        border: 1px solid var(--line);
-        background: linear-gradient(180deg, var(--surface-2), var(--surface));
-        padding: 1rem;
-      }
-
-      .quote p {
-        margin: 0;
-        color: #dbe7ff;
-        line-height: 1.65;
-      }
-
-      .quote .author {
-        margin-top: 0.55rem;
-        color: var(--muted);
-        font-size: 0.82rem;
-      }
-
-      .faq {
-        display: grid;
-        gap: 0.6rem;
-      }
-
-      .faq details {
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        background: var(--surface);
-        padding: 0.75rem 0.9rem;
-      }
-
-      .faq summary {
-        cursor: pointer;
-        font-weight: 650;
-      }
-
-      .faq p {
-        margin: 0.55rem 0 0;
-        color: var(--muted);
-        line-height: 1.6;
-      }
-
-      .final-cta {
-        margin: 1.8rem 0 3.8rem;
-        border-radius: var(--radius-lg);
-        border: 1px solid rgba(37, 211, 102, 0.4);
-        background: radial-gradient(circle at 10% 5%, rgba(37, 211, 102, 0.28), transparent 55%), var(--surface);
-        padding: 1.4rem;
-      }
-
-      .final-cta h3 {
-        margin: 0 0 0.45rem;
-      }
-
-      .final-cta p {
-        margin: 0 0 0.95rem;
-        color: var(--muted);
+      .hero-preview {
+        padding: 1.2rem;
       }
 
       .floating-wa {
-        position: fixed;
+        left: 1rem;
         right: 1rem;
-        bottom: 1rem;
-        z-index: 30;
-        border-radius: 999px;
-        padding: 0.92rem 1.2rem;
-        font-weight: 800;
-        color: #04130b;
-        background: linear-gradient(90deg, #37ff8f, #25d366);
-        box-shadow: 0 16px 32px rgba(37, 211, 102, 0.4);
-      }
-
-      footer {
-        color: var(--muted);
-        border-top: 1px solid var(--line);
-        padding: 1rem 0 1.4rem;
         text-align: center;
-        font-size: 0.85rem;
       }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#" class="brand">商家回收<span class="accent">合作中心</span></a>
+      <nav class="nav">
+        <a href="#products">回收品类</a>
+        <a href="#features">核心优势</a>
+        <a href="#reviews">客户反馈</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <a class="btn btn-primary" href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">立即咨询</a>
+    </div>
+  </header>
 
-      @media (max-width: 1024px) {
-        .hero-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .product-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .features,
-        .proof {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .nav {
-          display: none;
-        }
-
-        .hero {
-          padding-top: 3.2rem;
-        }
-
-        .metrics {
-          grid-template-columns: 1fr;
-        }
-
-        .product-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <a href="#" class="brand">商家回收<span class="accent">合作中心</span></a>
-        <nav class="nav">
-          <a href="#products">回收品类</a>
-          <a href="#features">核心优势</a>
-          <a href="#reviews">客户反馈</a>
-          <a href="#faq">常见问题</a>
-        </nav>
-        <a class="btn btn-primary" href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">立即咨询</a>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div class="container hero-grid">
-        <article class="hero-card">
-          <span class="eyebrow">商业级回收合作页面</span>
-          <h1>批量收购合作：商家直接联系，快速报价与长期合作</h1>
-          <p class="lead">
-            我们长期收购各类服装、二手皮包、电子产品，欢迎有稳定货源的商家对接。
-            支持批量回收、持续采购、长期合作，报价透明、沟通高效。
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-whatsapp" href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">
-              WhatsApp 立即咨询
-            </a>
-            <a class="btn btn-primary" href="#products">查看回收品类</a>
-          </div>
-          <div class="metrics">
-            <div class="metric"><strong>1000+</strong><span>累计合作商家</span></div>
-            <div class="metric"><strong>48h</strong><span>批量回收响应时效</span></div>
-            <div class="metric"><strong>24/7</strong><span>WhatsApp 在线咨询</span></div>
-          </div>
-        </article>
-
-        <aside class="hero-showcase">
-          <div class="tile">
-            <h3>批量收购流程</h3>
-            <p>支持整批出货、打包评估与分级报价，减少中间沟通成本。</p>
-          </div>
-          <div class="tile">
-            <h3>长期合作机制</h3>
-            <p>量大商家可建立长期采购关系，支持周期性回收与稳定结算。</p>
-          </div>
-          <div class="tile">
-            <h3>品类覆盖广</h3>
-            <p>各类服装、二手皮包、电子产品均可咨询，支持多地区货源对接。</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="products" class="section">
-      <div class="container">
-        <h2 class="section-title">核心回收品类</h2>
-        <p class="section-sub">欢迎商家批量对接，量大者优先，支持长期稳定合作。</p>
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-thumb">各类服装</div>
-            <div class="product-body">
-              <h3 class="product-name">男女装 / 童装 / 库存尾货回收</h3>
-              <p class="product-meta">支持整批、混批、清仓货源对接</p>
-              <div class="price"><strong>长期收购</strong><a href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">咨询</a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-thumb">二手皮包</div>
-            <div class="product-body">
-              <h3 class="product-name">品牌包 / 轻奢包 / 成色分级回收</h3>
-              <p class="product-meta">支持多品牌、多等级批量咨询</p>
-              <div class="price"><strong>长期收购</strong><a href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">咨询</a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-thumb">电子产品</div>
-            <div class="product-body">
-              <h3 class="product-name">手机 / 平板 / 笔记本 / 配件回收</h3>
-              <p class="product-meta">支持批量检测、按机况报价</p>
-              <div class="price"><strong>长期收购</strong><a href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">咨询</a></div>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-thumb">量大合作</div>
-            <div class="product-body">
-              <h3 class="product-name">量大者优先，欢迎长期供货商</h3>
-              <p class="product-meta">可建立长期合作与稳定采购计划</p>
-              <div class="price"><strong>优先合作</strong><a href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">咨询</a></div>
-            </div>
-          </article>
+  <section class="hero">
+    <div class="container hero-grid">
+      <article class="hero-card">
+        <span class="eyebrow">分享链接时自动带广告图</span>
+        <h1>批量收购合作：商家直接联系，快速报价与长期合作</h1>
+        <p class="lead">
+          我们长期收购各类服装、二手皮包、电子产品，欢迎有稳定货源的商家对接。
+          支持批量回收、持续采购、长期合作，报价透明、沟通高效。
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">
+            WhatsApp 立即咨询
+          </a>
+          <a class="btn btn-secondary" href="#products">查看回收品类</a>
         </div>
-      </div>
-    </section>
+        <div class="metrics">
+          <div class="metric"><strong>1000+</strong><span>累计合作商家</span></div>
+          <div class="metric"><strong>48h</strong><span>批量回收响应时效</span></div>
+          <div class="metric"><strong>24/7</strong><span>在线咨询响应</span></div>
+        </div>
+      </article>
 
-    <section id="features" class="section">
-      <div class="container">
-        <h2 class="section-title">为什么选择我们做批量回收合作</h2>
+      <aside class="hero-preview">
+        <div class="preview-card">
+          <span class="preview-label">链接预览广告图</span>
+          <div class="preview-image">
+            <img src="/share-preview.png" alt="批量收购合作广告图" width="1200" height="630">
+          </div>
+          <p class="preview-copy">现在把链接发给别人时，聊天软件会优先读取上面的分享图并显示在链接下方。</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <div class="container">
+      <h2 class="section-title">核心回收品类</h2>
+      <p class="section-sub">欢迎商家批量对接，量大者优先，支持长期稳定合作。</p>
+      <div class="grid-4">
+        <article class="card">
+          <div class="category-icon">👕</div>
+          <h3>各类服装</h3>
+          <p>男女装 / 童装 / 库存尾货回收，支持整批、混批、清仓货源对接。</p>
+        </article>
+        <article class="card">
+          <div class="category-icon">👜</div>
+          <h3>二手皮包</h3>
+          <p>品牌包 / 轻奢包 / 成色分级回收，支持多品牌、多等级批量咨询。</p>
+        </article>
+        <article class="card">
+          <div class="category-icon">📱</div>
+          <h3>电子产品</h3>
+          <p>手机 / 平板 / 笔记本 / 配件回收，支持批量检测与按机况报价。</p>
+        </article>
+        <article class="card">
+          <div class="category-icon">🤝</div>
+          <h3>量大合作</h3>
+          <p>量大者优先，欢迎长期供货商，可建立稳定采购与结算机制。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container two-column">
+      <article class="card">
+        <h2 class="section-title">为什么选择我们</h2>
         <p class="section-sub">流程标准、沟通高效、合作稳定，适合有货源的商家长期对接。</p>
-        <div class="features">
-          <article class="feature">
+        <div class="faq">
+          <div class="card">
             <h4>快速评估报价</h4>
-            <p>提供图片/视频/清单即可初步估价，批量货源可快速确认合作意向。</p>
-          </article>
-          <article class="feature">
+            <p>提供图片、视频或清单即可初步估价，批量货源可快速确认合作意向。</p>
+          </div>
+          <div class="card">
             <h4>批量回收能力</h4>
             <p>支持多品类并行处理，适配商家清仓、换季、回款等高频场景。</p>
-          </article>
-          <article class="feature">
+          </div>
+          <div class="card">
             <h4>长期稳定合作</h4>
-            <p>量大优先，欢迎长期供货合作伙伴，建立持续回收通道。</p>
-          </article>
+            <p>欢迎长期供货合作伙伴，建立持续回收通道，减少重复沟通成本。</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <section id="reviews" class="section">
-      <div class="container">
-        <h2 class="section-title">合作商家反馈</h2>
-        <p class="section-sub">以下为长期合作商家在回收效率与结算方面的反馈。</p>
-        <div class="proof">
-          <article class="quote">
-            <p>“库存服装批量处理很快，沟通直接，省去了很多中间环节。”</p>
-            <div class="author">— 服装渠道商</div>
-          </article>
-          <article class="quote">
-            <p>“二手皮包可以按成色分级回收，报价清晰，适合长期合作。”</p>
-            <div class="author">— 二奢商家</div>
-          </article>
-          <article class="quote">
-            <p>“电子产品整批出货对接顺畅，响应快，后续合作也很稳定。”</p>
-            <div class="author">— 数码供货商</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <div class="container">
-        <h2 class="section-title">常见问题</h2>
-        <p class="section-sub">上线前你最关心的 3 个问题。</p>
+      <article class="card">
+        <h2 class="section-title">分享场景优化</h2>
+        <p class="section-sub">页面头部已经补上完整的社交分享元信息，聊天工具抓链接时更容易显示图片。</p>
         <div class="faq">
-          <details>
-            <summary>你们主要回收哪些品类？</summary>
-            <p>目前重点回收各类服装、二手皮包、电子产品，也欢迎其他品类先发资料咨询。</p>
-          </details>
-          <details>
-            <summary>量大可以长期合作吗？</summary>
-            <p>可以。量大商家可建立长期回收合作机制，按周期对接货源与回收计划。</p>
-          </details>
-          <details>
-            <summary>怎么开始对接？</summary>
-            <p>直接点击页面的 WhatsApp 按钮发送品类与大致数量，我们会尽快给出回收方案。</p>
-          </details>
+          <div class="card">
+            <h4>Open Graph 图片</h4>
+            <p>已配置 1200 x 630 的 `share-preview.png`，适配常见聊天软件与社交平台。</p>
+          </div>
+          <div class="card">
+            <h4>Twitter 大图卡片</h4>
+            <p>已同步配置 `twitter:card` 与 `twitter:image`，避免不同平台读取行为不一致。</p>
+          </div>
+          <div class="card">
+            <h4>单一 HTML 结构</h4>
+            <p>清理了原文件里的重复拼接内容，防止爬虫读取 head 信息时解析异常。</p>
+          </div>
         </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="reviews" class="section">
+    <div class="container">
+      <h2 class="section-title">合作商家反馈</h2>
+      <p class="section-sub">以下为长期合作商家在回收效率与沟通体验方面的反馈。</p>
+      <div class="testimonial-grid">
+        <article class="quote">
+          <p>“库存服装批量处理很快，沟通直接，省去了很多中间环节。”</p>
+          <div class="author">— 服装渠道商</div>
+        </article>
+        <article class="quote">
+          <p>“二手皮包可以按成色分级回收，报价清晰，适合长期合作。”</p>
+          <div class="author">— 二奢商家</div>
+        </article>
+        <article class="quote">
+          <p>“电子产品整批出货对接顺畅，响应快，后续合作也很稳定。”</p>
+          <div class="author">— 数码供货商</div>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="container final-cta">
-      <h3>准备开始批量回收合作？</h3>
-      <p>量大者、可长期合作者，欢迎直接通过 WhatsApp 与我联系咨询。</p>
-      <a class="btn btn-whatsapp" href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">
-        WhatsApp：+855718240989
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="section-title">常见问题</h2>
+      <p class="section-sub">上线前你最关心的几个问题。</p>
+      <div class="faq">
+        <details>
+          <summary>你们主要回收哪些品类？</summary>
+          <p>目前重点回收各类服装、二手皮包、电子产品，也欢迎其他品类先发资料咨询。</p>
+        </details>
+        <details>
+          <summary>量大可以长期合作吗？</summary>
+          <p>可以。量大商家可建立长期回收合作机制，按周期对接货源与回收计划。</p>
+        </details>
+        <details>
+          <summary>怎么开始对接？</summary>
+          <p>直接点击页面的 WhatsApp 按钮发送品类与大致数量，我们会尽快给出回收方案。</p>
+        </details>
+        <details>
+          <summary>为什么现在发链接会显示图片？</summary>
+          <p>因为页面已配置 `og:image` 与 `twitter:image`，聊天软件抓取链接时会优先展示这张广告图。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="container final-cta">
+    <h3>准备开始批量回收合作？</h3>
+    <p>量大者、可长期合作者，欢迎直接通过 WhatsApp 与我联系咨询。</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/855718240989" target="_blank" rel="noopener noreferrer">
+        WhatsApp：+855 71 824 0989
       </a>
-    </section>
+      <a class="btn btn-secondary" href="#faq">查看常见问题</a>
+    </div>
+  </section>
 
-    <footer>
-      <div class="container">© <span id="year"></span> 商家回收合作中心. All rights reserved.</div>
-    </footer>
+  <footer>
+    <div class="container">© <span id="year"></span> 商家回收合作中心. All rights reserved.</div>
+  </footer>
 
-    <a
-      class="floating-wa"
-      href="https://wa.me/855718240989"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="WhatsApp 联系我们"
-    >
-      WhatsApp 咨询
-    </a>
+  <a
+    class="floating-wa"
+    href="https://wa.me/855718240989"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp 联系我们"
+  >
+    WhatsApp 咨询
+  </a>
 
-    <script>
-      document.getElementById('year').textContent = String(new Date().getFullYear());
-    </script>
-  </body>
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
 </html>
