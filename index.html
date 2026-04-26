@@ -16,8 +16,8 @@
     content="Landing page redesigned around the original images in the project root, with bilingual safety guidance and official help links."
   >
   <meta property="og:url" content="https://luodiye-delta.vercel.app/">
-  <meta property="og:image" content="https://luodiye-delta.vercel.app/IMG_20260426_162309_762.jpg">
-  <meta property="og:image:secure_url" content="https://luodiye-delta.vercel.app/IMG_20260426_162309_762.jpg">
+  <meta property="og:image" content="https://luodiye-delta.vercel.app/IMG_20260426_180842_928.jpg">
+  <meta property="og:image:secure_url" content="https://luodiye-delta.vercel.app/IMG_20260426_180842_928.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="768">
   <meta property="og:image:height" content="368">
@@ -28,7 +28,7 @@
     name="twitter:description"
     content="Original-image-first landing page with language selection, device guidance, and official help links."
   >
-  <meta name="twitter:image" content="https://luodiye-delta.vercel.app/IMG_20260426_162309_762.jpg">
+  <meta name="twitter:image" content="https://luodiye-delta.vercel.app/IMG_20260426_180842_928.jpg">
   <style>
     :root {
       --bg: #f3fbf6;
@@ -571,19 +571,19 @@
       </article>
 
       <aside class="hero-visual">
-        <img src="/IMG_20260426_162309_762.jpg" alt="WhatsApp original visual reference" width="1600" height="900">
+        <img src="/IMG_20260426_180842_928.jpg" alt="WhatsApp original visual reference" width="1600" height="900">
         <div class="visual-caption">
           <span class="mini-badge">
             <span class="lang-zh">原图主视觉</span>
             <span class="lang-en">Original hero image</span>
           </span>
           <strong>
-            <span class="lang-zh">根目录现有原图已直接嵌入页面</span>
-            <span class="lang-en">The existing root image is embedded directly into the page</span>
+            <span class="lang-zh">分享预览原图已直接嵌入页面</span>
+            <span class="lang-en">The uploaded share-preview image is embedded directly into the page</span>
           </strong>
           <p class="status-copy">
-            <span class="lang-zh">如果后续把其余原图放入根目录，下方画廊会按文件名自动展示可用图片。</span>
-            <span class="lang-en">If the remaining original images are later added to the project root, the gallery below will automatically show any asset that becomes available.</span>
+            <span class="lang-zh">当前链接分享图与首屏主图保持一致，下方画廊会继续展示根目录中的其他原图资源。</span>
+            <span class="lang-en">The shared-link image now matches the hero image, and the gallery below continues to show the other original assets from the project root.</span>
           </p>
         </div>
       </aside>
@@ -674,8 +674,8 @@
           <span class="lang-en">Asset behavior</span>
         </h3>
         <p>
-          <span class="lang-zh">页面会尝试加载你指定的 5 张原图文件；当前仓库里存在的图片会直接展示，未放入根目录的图片会被自动跳过。</span>
-          <span class="lang-en">The page attempts to load the 5 original image filenames you specified. Any image currently present in the root is shown directly, while missing files are skipped automatically.</span>
+          <span class="lang-zh">页面会尝试加载根目录中的原图文件；当前仓库里存在的图片会直接展示，缺失文件会被自动跳过。</span>
+          <span class="lang-en">The page attempts to load original image files from the project root. Any image present in the root is shown directly, while missing files are skipped automatically.</span>
         </p>
       </article>
     </div>
@@ -780,6 +780,7 @@
     const galleryStatus = document.getElementById("galleryStatus");
 
     const assets = [
+      { src: "/IMG_20260426_180842_928.jpg", zh: "分享预览原图", en: "Share preview image" },
       { src: "/MG_20260426_180838_472.jpg", zh: "原图资源 01", en: "Original asset 01" },
       { src: "/IMG_20260426_180835_466.jpg", zh: "原图资源 02", en: "Original asset 02" },
       { src: "/IMG_20260426_180833_315.jpg", zh: "原图资源 03", en: "Original asset 03" },
